@@ -7,19 +7,14 @@
 <div class="page-container sidebar-collapsed"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->	
 	@include('partials.sidebar')
 	<div class="main-content">
-		@include('partials.menu-head', ['username' => $user->name])
+		@section('menu-head')
+			This is the menu head
+		@show
 		<hr />
-		@yield('script-codes')
-		@yield('charts')
-		@yield('script-codes2')
-		<div class="row">
-			@yield('task')
-			@yield('map')
-		</div>
-		@include('partials.footer')
+		@yield('content')
 	</div>
 </div>
 @include('partials.modal-dialog')
-@include('partials.foot')
+@include('partials.footer')
 </body>
 </html>
