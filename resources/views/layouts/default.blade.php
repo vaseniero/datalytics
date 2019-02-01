@@ -8,7 +8,6 @@
 	@include('partials.sidebar')
 	<div class="main-content">
 		@section('menu-head')
-			This is the menu head
 		@show
 		<hr />
 		@yield('content')
